@@ -12,6 +12,29 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        black: '#000000',
+        gray: '#CCCCCC',
+        green: '#DAFF01',
+        purple: '#9353FF',
+        gray: '#343A40',
+        bannerRose: '#EE6471',
+        bannerOrange: '#F87F46'
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)']
+      },
+      screens: {
+        phone: '375px',
+        tablet: '768px',
+        desktop: '1440px'
+      },
+      maxWidth: {
+        desktop: '1440px'
+      },
+      minWidth: {
+        phone: '375px',
+      }
     },
   },
   plugins: [],

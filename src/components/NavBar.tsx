@@ -6,36 +6,36 @@ import LogoTablet from '@images/Tablet/Logo_tablet.png'
 import hamburger from '@images/icon/hamburger.png'
 import { useState } from 'react'
 
-export default function NavBar() {
-  const links = [
-    { name: 'Home', url: '', active: true },
-    { name: 'Our Stores', url: '', active: false },
-    { name: 'News', url: '', active: false },
-    { name: 'Promotions', url: '', active: false },
-  ]
+const links = [
+  { name: 'Home', url: '', active: true },
+  { name: 'Our Stores', url: '', active: false },
+  { name: 'News', url: '', active: false },
+  { name: 'Promotions', url: '', active: false },
+]
 
+export default function NavBar() {
   const pageWidth = window.innerWidth
   const isMobile = pageWidth < 768
   const isTablet = pageWidth < 1440
-  const [showHamburger, setShowHamburger] = useState(!isMobile)
+  const [showHamburger, setShowHamburger] = useState(false)
 
   return (
-    <nav className="flex h-[58px] w-full flex-wrap bg-black align-middle text-white tablet:flex-nowrap tablet:px-4">
-      <div className="flex h-[58px] w-full items-center justify-between px-4 tablet:justify-start tablet:gap-4">
+    <nav className="flex h-fit min-h-[58px] w-full flex-wrap bg-black text-white tablet:flex-nowrap tablet:px-6">
+      <div className="flex min-h-[58px] w-full items-center justify-between px-4 tablet:justify-start tablet:gap-4">
         <Image
           src={isMobile ? logoMobile : isTablet ? LogoTablet : logoDesktop}
           alt="Logo"
           className={`${isMobile ? 'h-[18px] w-[125px]' : 'h-[24px] w-[99px]'}`}
         />
 
-        <ul className="flex-row gap-6 bg-inherit phone:hidden tablet:flex">
+        <ul className=" hidden flex-row gap-6 bg-inherit tablet:flex">
           {links.map((link) => (
             <li key={link.name}>
               <a
                 href={link.url}
-                className={` ${
+                className={`duration-12000 transition ease-in-out ${
                   link.active ? 'text-green' : 'text-white '
-                } transition-all hover:border-b-2 hover:border-green hover:text-green`}
+                } hover:border-b-2 hover:border-green hover:text-green`}
               >
                 {link.name}
               </a>

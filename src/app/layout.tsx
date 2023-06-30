@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} font-inter`}>
-      <body className="grid min-h-screen min-w-full grid-cols-1 grid-rows-3 bg-blue-300 text-black transition-all">
+      <body className="grid min-h-screen min-w-full grid-cols-1 grid-rows-[minmax(58px,min-content)_auto_100px] bg-blue-300 text-black transition-all">
         <NavBar />
         {children}
         {/* Footer here */}

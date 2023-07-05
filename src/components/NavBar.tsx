@@ -27,7 +27,6 @@ export default function NavBar() {
           alt="Logo"
           className={`${isMobile ? 'h-[18px] w-[125px]' : 'h-[24px] w-[99px]'}`}
         />
-
         <ul className=" hidden flex-row gap-6 bg-inherit tablet:flex">
           {links.map((link) => (
             <li key={link.name}>
@@ -44,7 +43,7 @@ export default function NavBar() {
         </ul>
 
         {showHamburger ? (
-          <ul className="absolute right-0 top-0 flex flex-col bg-gray px-6 py-4 tablet:hidden">
+          <ul className="absolute right-0 top-0 flex flex-col bg-gray px-6 py-4 tablet:hidden z-10">
             <span
               className="cursor-pointer self-end p-1 text-xl text-green tablet:hidden"
               onClick={() => {

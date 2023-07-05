@@ -1,16 +1,12 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/assets/**/*.png'
   ],
   theme: {
     extend: {
-     
       colors: {
         black: '#000000',
         gray: '#CCCCCC',
@@ -35,8 +31,6 @@ module.exports = {
         phone: '375px',
       }
     },
-
-
   },
   plugins: [],
 }

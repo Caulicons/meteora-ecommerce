@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textColors: {
+        subTitle: '#212529',
+      },
       colors: {
         black: '#000000',
         gray: '#CCCCCC',

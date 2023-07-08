@@ -6,4 +6,8 @@
   .no-display-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .carousel-center{
+    scroll-snap-align: start;
+  }
 }

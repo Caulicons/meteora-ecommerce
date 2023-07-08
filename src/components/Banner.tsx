@@ -3,128 +3,20 @@ import { useRef, useState } from 'react'
 import Image from 'next/image'
 import leftArrow from '@images/icon/carousel/icon-arrow-left.png'
 import rightArrow from '@images/icon/carousel/icon-arrow-right.png'
-
-import bannerMobile01 from '@images/Mobile/Banner_carousel 1 _ 375.png'
-import bannerMobile02 from '@images/Mobile/Banner carousel 2 _ 375.png'
-import bannerMobile03 from '@images/Mobile/Banner carousel 3 _ 375.png'
-
-import bannerTablet01 from '@images/Tablet/Banner carousel 1 _ 768.png'
-import bannerTablet02 from '@images/Tablet/Banner carousel 2 _ 768.png'
-import bannerTablet03 from '@images/Tablet/Banner carousel 3 _ 768.png'
-
-import bannerDesktop01 from '@images/Desktop/Banner carousel 1 _ 1440.png'
-import bannerDesktop02 from '@images/Desktop/Banner carousel 2 _ 1440.png'
-import bannerDesktop03 from '@images/Desktop/Banner carousel 3 _ 1440.png'
-
-const banners = {
-  mobile: [
-    {
-      id: 1,
-      image: bannerMobile01,
-      vitrine: 0,
-      info: { slug: '', description: '' },
-    },
-    {
-      id: 2,
-      image: bannerMobile02,
-      vitrine: 1,
-      info: {
-        position: 'right',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Estilo e qualidade para durar.',
-      },
-    },
-    {
-      id: 3,
-      image: bannerMobile03,
-      vitrine: 2,
-      info: {
-        position: 'left',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Alto impacto visual, baixo impacto ambiental!',
-      },
-    },
-  ],
-  tablet: [
-    {
-      id: 4,
-      image: bannerTablet01,
-      vitrine: 0,
-      info: { slug: '', description: '' },
-    },
-    {
-      id: 5,
-      image: bannerTablet02,
-      vitrine: 1,
-      info: {
-        position: 'right',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Estilo e qualidade para durar.',
-      },
-    },
-    {
-      id: 6,
-      image: bannerTablet03,
-      vitrine: 2,
-      info: {
-        position: 'left',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Alto impacto visual, baixo impacto ambiental!',
-      },
-    },
-  ],
-  desktop: [
-    {
-      id: 7,
-      image: bannerDesktop01,
-      vitrine: 0,
-      info: { slug: '', description: '' },
-    },
-    {
-      id: 8,
-      image: bannerDesktop02,
-      vitrine: 1,
-      info: {
-        position: 'right',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Estilo e qualidade para durar',
-      },
-    },
-    {
-      id: 9,
-      image: bannerDesktop03,
-      vitrine: 2,
-      info: {
-        position: 'left',
-        slug: 'COLEÇÃO ATEMPORAL',
-        description: 'Alto impacto visual, baixo impacto ambiental!',
-      },
-    },
-  ],
-  quantity: 3,
-}
-
-const handleResize = () => {
-  const isMobile = window.innerWidth <= 375
-  const isTablet = window.innerWidth > 375 && window.innerWidth <= 768
-  return isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
-}
+import { banners } from '@/data/banner'
+import { useWhichScreen } from '@/utils/hooks/useHandleResize'
 
 export default function Banner() {
   const [show, setShow] = useState(0)
-  const [whichScreen, setWhichScreen] = useState<
-    'mobile' | 'tablet' | 'desktop'
-  >(handleResize())
+  const whichScreen = useWhichScreen()
   const carouselRef = useRef<HTMLDivElement>(null)
-
-  window.addEventListener('resize', () => {
-    setWhichScreen(handleResize())
-  })
-
   const scrollToSlide = (
     direction: 'right' | 'left' | 'centralize',
     number?: number,
   ) => {
+    const carousel = carouselRef.current
+    const slideWidth = carousel?.clientWidth || 0
+
     let toShow = show
     switch (direction) {
       case 'right': {
@@ -134,7 +26,7 @@ export default function Banner() {
         break
       }
       case 'left':
-        const result = show - 1 < 0 ? banners.quantity : show - 1
+        const result = show - 1 < 0 ? banners.quantity - 1 : show - 1
         setShow(result)
         toShow = result
         break
@@ -145,13 +37,10 @@ export default function Banner() {
         }
     }
 
-    const slides = carouselRef.current?.getElementsByClassName('slide')
-
-    if (slides && slides[toShow]) {
-      slides[toShow].scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-      })
+    if (carousel) {
+      const scrollPosition = toShow * slideWidth
+      console.log('scrollPosition', scrollPosition)
+      carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' })
     }
   }
 
@@ -165,12 +54,12 @@ export default function Banner() {
           return (
             <div
               key={banner.id}
-              className="relative flex w-full flex-none snap-start\ items-center justify-center"
+              className="relative flex w-full flex-none snap-start items-center justify-center "
             >
               <Image
                 src={banner.image}
                 alt="banner"
-                className={`slide shrink-0 transition-all duration-700 ease-in-out w-full`}
+                className={`slide w-full shrink-0 transition-all duration-700 ease-in-out`}
                 style={{ objectFit: 'cover' }}
               />
               <div
@@ -195,7 +84,7 @@ export default function Banner() {
           return (
             <span
               key={i}
-              className={`min-w-[33px] cursor-pointer rounded-xl p-[3px] duration-700 ease-in-out ${
+              className={`min-w-[33px] cursor-pointer rounded-xl p-[2px] duration-700 ease-in-out ${
                 i === show ? 'bg-white' : 'bg-slate-300 opacity-60 '
               } `}
               onClick={() => scrollToSlide('centralize', i)}

@@ -39,13 +39,12 @@ export default function Banner() {
 
     if (carousel) {
       const scrollPosition = toShow * slideWidth
-      console.log('scrollPosition', scrollPosition)
       carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' })
     }
   }
 
   return (
-    <div className="relative m-auto my-0 w-full ">
+    <div className="relative m-auto my-0 w-full">
       <div
         className="no-display-scrollbar flex snap-x snap-mandatory overflow-auto"
         ref={carouselRef}
@@ -59,11 +58,12 @@ export default function Banner() {
               <Image
                 src={banner.image}
                 alt="banner"
-                className={`slide w-full shrink-0 transition-all duration-700 ease-in-out`}
+                height={415}
+                className={`slide w-full shrink-0 transition-all duration-700 ease-in-out h-auto max-h-[415px]`}
                 style={{ objectFit: 'cover' }}
               />
               <div
-                className={`absolute mt-[45%] w-9/12 text-center phone:mt-auto ${
+                className={`absolute mt-[45%]  phone:mt-[25%] w-9/12 text-center tablet:mt-auto  ${
                   banner.info.position === 'right'
                     ? 'phone:text-right '
                     : 'phone:text-left'

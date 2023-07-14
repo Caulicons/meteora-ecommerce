@@ -11,7 +11,7 @@ import bannerDesktop02 from '@images/Desktop/Banner carousel 2 _ 1440.png'
 import bannerDesktop03 from '@images/Desktop/Banner carousel 3 _ 1440.png'
 
 
-export  const banners = {
+export const banners = {
   mobile: [
     {
       id: 1,

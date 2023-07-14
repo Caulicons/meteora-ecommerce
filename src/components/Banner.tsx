@@ -58,12 +58,12 @@ export default function Banner() {
               <Image
                 src={banner.image}
                 alt="banner"
-                height={415}
-                className={`slide w-full shrink-0 transition-all duration-700 ease-in-out h-auto max-h-[415px]`}
+                className={`slide h-auto max-h-[415px] w-full shrink-0 transition-all duration-700 ease-in-out `}
                 style={{ objectFit: 'cover' }}
+                priority
               />
               <div
-                className={`absolute mt-[45%]  phone:mt-[25%] w-9/12 text-center tablet:mt-auto  ${
+                className={`absolute mt-[45%]  w-9/12 text-center phone:mt-[25%] tablet:mt-auto  ${
                   banner.info.position === 'right'
                     ? 'phone:text-right '
                     : 'phone:text-left'

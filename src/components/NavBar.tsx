@@ -25,7 +25,7 @@ export default function NavBar() {
         <Image
           src={isMobile ? logoMobile : isTablet ? LogoTablet : logoDesktop}
           alt="Logo"
-          className={`${isMobile ? 'h-[18px] w-[125px]' : 'h-[24px] w-[99px]'}`}
+          className={`h-auto w-auto ${isMobile ? 'h-[18px] w-[125px]' : 'h-[24px] w-[99px]'}`}
         />
         <ul className=" hidden flex-row gap-6 bg-inherit tablet:flex">
           {links.map((link) => (

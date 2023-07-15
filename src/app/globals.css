@@ -10,4 +10,8 @@
   .carousel-center{
     scroll-snap-align: start;
   }
+
+  .hidden-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

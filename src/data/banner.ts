@@ -9,7 +9,7 @@ import bannerTablet03 from '@images/Tablet/Banner carousel 3 _ 768.png'
 import bannerDesktop01 from '@images/Desktop/Banner carousel 1 _ 1440.png'
 import bannerDesktop02 from '@images/Desktop/Banner carousel 2 _ 1440.png'
 import bannerDesktop03 from '@images/Desktop/Banner carousel 3 _ 1440.png'
-
+import { randomUUID } from 'crypto'
 
 export const banners = {
   mobile: [
@@ -17,7 +17,7 @@ export const banners = {
       id: 1,
       image: bannerMobile01,
       vitrine: 0,
-      info: { slug: '', description: '' },
+      info: { position: '', slug: '', description: '' },
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ export const banners = {
       id: 4,
       image: bannerTablet01,
       vitrine: 0,
-      info: { slug: '', description: '' },
+      info: { position: '', slug: '', description: '' },
     },
     {
       id: 5,
@@ -73,7 +73,7 @@ export const banners = {
       id: 7,
       image: bannerDesktop01,
       vitrine: 0,
-      info: { slug: '', description: '' },
+      info: { position: '', slug: '', description: '' },
     },
     {
       id: 8,

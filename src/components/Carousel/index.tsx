@@ -5,8 +5,9 @@ import leftArrow from '@images/icon/carousel/icon-arrow-left.png'
 import rightArrow from '@images/icon/carousel/icon-arrow-right.png'
 import { banners } from '@/data/banner'
 import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import Banner from './Banner'
 
-export default function Banner() {
+export default function Carousel() {
   const [show, setShow] = useState(0)
   const whichScreen = useWhichScreen()
   const carouselRef = useRef<HTMLDivElement>(null)
@@ -49,37 +50,11 @@ export default function Banner() {
         className="no-display-scrollbar flex snap-x snap-mandatory overflow-auto"
         ref={carouselRef}
       >
-        {banners[whichScreen].map((banner) => {
-          return (
-            <div
-              key={banner.id}
-              className="relative flex w-full flex-none snap-start items-center justify-center "
-            >
-              <Image
-                src={banner.image}
-                alt="banner"
-                className={`slide h-auto max-h-[415px] w-full shrink-0 transition-all duration-700 ease-in-out `}
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-              <div
-                className={`absolute mt-[45%]  w-9/12 text-center phone:mt-[25%] tablet:mt-auto  ${
-                  banner.info.position === 'right'
-                    ? 'phone:text-right '
-                    : 'phone:text-left'
-                }`}
-              >
-                <h1 className="text-[32px] font-medium text-white tablet:text-[48px]">
-                  {banner.info.slug}
-                </h1>
-                <p className="text-white">{banner.info.description}</p>
-              </div>
-            </div>
-          )
-        })}
+        {banners[whichScreen].map((banner) => (
+          <Banner banner={banner} key={banner.id} />
+        ))}
       </div>
-
-      <span className="absolute bottom-3 flex w-full justify-center gap-2">
+      <span className="absolute bottom-3 flex w-full justify-center gap-2 ">
         {banners[whichScreen].map((_, i) => {
           return (
             <span
@@ -93,17 +68,17 @@ export default function Banner() {
         })}
       </span>
       <span
-        className="absolute top-0 h-full w-1/6 cursor-pointer "
+        className="hidden-highlight absolute top-0 h-full w-1/6 cursor-pointer"
         onClick={() => scrollToSlide('left')}
       >
         <Image
           src={leftArrow}
           alt="preview banner"
-          className="absolute left-6 top-1/2"
+          className="absolute left-6 top-1/2 "
         />
       </span>
       <span
-        className="absolute right-0 top-0 h-full w-1/6 cursor-pointer"
+        className="hidden-highlight absolute right-0 top-0 h-full w-1/6 cursor-pointer"
         onClick={() => scrollToSlide('right')}
       >
         <Image

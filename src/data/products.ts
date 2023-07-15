@@ -21,7 +21,7 @@ import desktopJaquetaJeans from '@images/Desktop/Imagens cards/jaqueta jeans.png
 import desktopOculos from '@images/Desktop/Imagens cards/Oculos.png'
 import desktopTenis from '@images/Desktop/Imagens cards/tenis.png'
 
-export const products = [
+export const products =  [
   {
     id: randomUUID(),
     name: 'Comfort shirt',
@@ -37,7 +37,7 @@ export const products = [
   {
     id: randomUUID(),
     name: 'Tailor Paints',
-    description: 'Wide Leg tailoring model in linen. A piece for life!',
+    description: 'Wide Leg tailoring model in linen, unissex. A piece for life!',
     price: 'R$ 180,00',
     image: { mobile: mobileCalça, tablet: tabletCalça, desktop: desktopCalça },
   },

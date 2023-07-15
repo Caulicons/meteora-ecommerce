@@ -1,10 +1,11 @@
 'use client'
 import Image from 'next/image'
 import logoDesktop from '@images/Desktop/Logo_desktop.png'
-import logoMobile from '@images/Mobile/Logo_Mobile.png'
+import logoMobile from '@images/Mobile/Logo_mobile.png'
 import LogoTablet from '@images/Tablet/Logo_tablet.png'
 import hamburger from '@images/icon/hamburger.png'
 import { useState } from 'react'
+import { useWhichScreen } from '@/utils/hooks/useHandleResize'
 
 const links = [
   { name: 'Home', url: '', active: true },
@@ -14,20 +15,27 @@ const links = [
 ]
 
 export default function NavBar() {
-  const pageWidth = window.innerWidth
-  const isMobile = pageWidth < 768
-  const isTablet = pageWidth < 1440
+  const widthScreen = useWhichScreen()
   const [showHamburger, setShowHamburger] = useState(false)
+
+  const handleBurguerToggle = () => {
+    setShowHamburger((show) => !show)
+  }
 
   return (
     <nav className="flex h-fit min-h-[58px] w-full flex-wrap bg-black text-white tablet:flex-nowrap tablet:px-6">
       <div className="flex min-h-[58px] w-full items-center justify-between px-4 tablet:justify-start tablet:gap-4">
         <Image
-          src={isMobile ? logoMobile : isTablet ? LogoTablet : logoDesktop}
+          src={
+            widthScreen === 'mobile'
+              ? logoMobile
+              : widthScreen === 'tablet'
+              ? LogoTablet
+              : logoDesktop
+          }
           alt="Logo"
-          className={`h-auto w-auto ${isMobile ? 'h-[18px] w-[125px]' : 'h-[24px] w-[99px]'}`}
         />
-        <ul className=" hidden flex-row gap-6 bg-inherit tablet:flex">
+        <ul className="hidden flex-row gap-6 bg-inherit tablet:flex">
           {links.map((link) => (
             <li key={link.name}>
               <a
@@ -41,14 +49,11 @@ export default function NavBar() {
             </li>
           ))}
         </ul>
-
         {showHamburger ? (
-          <ul className="absolute right-0 top-0 flex flex-col bg-gray px-6 py-4 tablet:hidden z-10">
+          <ul className="absolute right-0 top-0 z-10 flex flex-col bg-gray px-6 py-4 tablet:hidden">
             <span
               className="cursor-pointer self-end p-1 text-xl text-green tablet:hidden"
-              onClick={() => {
-                setShowHamburger((show) => !show)
-              }}
+              onClick={handleBurguerToggle}
             >
               X
             </span>
@@ -70,9 +75,7 @@ export default function NavBar() {
           <Image
             src={hamburger}
             alt="options"
-            onClick={() => {
-              setShowHamburger((show) => !show)
-            }}
+            onClick={handleBurguerToggle}
             className="h-[18px] w-[18px] cursor-pointer tablet:hidden"
           />
         )}
@@ -83,7 +86,7 @@ export default function NavBar() {
           placeholder="Find products"
           className="w-11/12 max-w-[225px] border-2 border-black px-3 py-2 text-black hover:border-gray"
         />
-        <button className="w:auto transparent  border-2 border-black p-2 font-bold text-black hover:bg-black hover:text-white tablet:border-white tablet:font-normal tablet:text-white">
+        <button className="w:auto transparent border-2 border-black p-2 font-bold text-black hover:bg-black hover:text-white tablet:border-white tablet:font-normal tablet:text-white">
           Search
         </button>
       </div>

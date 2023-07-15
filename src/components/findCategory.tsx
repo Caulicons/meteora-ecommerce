@@ -11,12 +11,14 @@ export default function FindCategory() {
       <h2 className="text-subTitle text-[32px] font-medium tablet:text-[32px]">
         Search for category:
       </h2>
-      <div className="grid grid-cols-2 gap-6 justify-items-center tablet:grid-cols-3 xl:grid-cols-6">
+      <div className="grid grid-cols-2 justify-items-center gap-6 tablet:grid-cols-3 xl:grid-cols-6">
         {categories[whichScreen].map((category, i) => {
           return (
-            <div className="h-[192px] min-w-[146px]" key={i}>
-              <Image src={category.image} alt="category"  />
-              <p className="bg-black text-center text-white h-[35px] grid place-content-center ">{category.name}</p>
+            <div className='cursor-pointer' key={i}>
+              <Image src={category.image} alt="category" />
+              <p className="grid h-[35px] place-content-center bg-black text-center text-white">
+                {category.name}
+              </p>
             </div>
           )
         })}

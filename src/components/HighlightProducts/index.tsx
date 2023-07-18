@@ -1,5 +1,5 @@
 import { products } from '@/data/products'
-import Product from './Produtc'
+import Product from './Product'
 
 export default function HighlightProducts() {
   return (

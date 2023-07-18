@@ -1,7 +1,7 @@
 import HighlightProducts from '@/components/HighlightProducts'
-import FindCategory from '@/components/FindCategory'
 import Facilities from '@/components/Facilities'
 import Carousel from '@/components/Carousel'
+import FindCategory from '@/components/FindCategory'
 
 export default function Home() {
   return (

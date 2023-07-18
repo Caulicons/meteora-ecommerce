@@ -54,7 +54,7 @@ export default function Carousel() {
           <Banner banner={banner} key={banner.id} />
         ))}
       </div>
-      <span className="absolute bottom-3 flex w-full justify-center gap-2 ">
+      <span className="batata absolute bottom-3 flex w-full justify-center gap-2">
         {banners[whichScreen].map((_, i) => {
           return (
             <span

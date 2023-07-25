@@ -9,7 +9,6 @@ import bannerTablet03 from '@images/Tablet/Banner carousel 3 _ 768.png'
 import bannerDesktop01 from '@images/Desktop/Banner carousel 1 _ 1440.png'
 import bannerDesktop02 from '@images/Desktop/Banner carousel 2 _ 1440.png'
 import bannerDesktop03 from '@images/Desktop/Banner carousel 3 _ 1440.png'
-import { randomUUID } from 'crypto'
 
 export const banners = {
   mobile: [

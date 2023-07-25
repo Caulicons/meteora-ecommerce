@@ -7,12 +7,23 @@ import { banners } from '@/data/banner'
 import { useWhichScreen } from '@/utils/hooks/useHandleResize'
 import Banner from './Banner'
 
-export default function Carousel() {
+function Carousel() {
   const [show, setShow] = useState(0)
   const whichScreen = useWhichScreen()
   const carouselRef = useRef<HTMLDivElement>(null)
+
+  const handleSlideScroll = () => {
+    const carousel = carouselRef.current
+    if (carousel) {
+      const slideWidth = carousel.clientWidth
+      const scrollPosition = carousel.scrollLeft
+      const toShow = Math.round(scrollPosition / slideWidth)
+      setShow(toShow)
+    }
+  }
+
   const scrollToSlide = (
-    direction: 'right' | 'left' | 'centralize',
+    direction: 'right' | 'left' | 'centralize' | 'auto',
     number?: number,
   ) => {
     const carousel = carouselRef.current
@@ -36,6 +47,7 @@ export default function Carousel() {
           setShow(number)
           toShow = number
         }
+        break
     }
 
     if (carousel) {
@@ -49,12 +61,13 @@ export default function Carousel() {
       <div
         className="no-display-scrollbar flex snap-x snap-mandatory overflow-auto"
         ref={carouselRef}
+        onScroll={handleSlideScroll}
       >
         {banners[whichScreen].map((banner) => (
           <Banner banner={banner} key={banner.id} />
         ))}
       </div>
-      <span className="batata absolute bottom-3 flex w-full justify-center gap-2">
+      <span className="absolute bottom-3 flex w-full justify-center gap-2">
         {banners[whichScreen].map((_, i) => {
           return (
             <span
@@ -90,3 +103,6 @@ export default function Carousel() {
     </div>
   )
 }
+
+export default Carousel
+

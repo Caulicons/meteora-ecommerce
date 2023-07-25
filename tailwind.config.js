@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      textColors: {
-        subTitle: '#212529',
-      },
       colors: {
         black: '#000000',
         gray: '#CCCCCC',
@@ -17,7 +14,8 @@ module.exports = {
         purple: '#9353FF',
         gray: '#343A40',
         bannerRose: '#EE6471',
-        bannerOrange: '#F87F46'
+        bannerOrange: '#F87F46',
+        subTitle: '#212529',
       },
       fontFamily: {
         inter: ['var(--font-inter)']

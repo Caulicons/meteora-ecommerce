@@ -4,6 +4,7 @@ import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import ProductModel from './ProductModel'
 import Modal from '@/components/Modal'
+import Button from '@/components/Inputs/Button'
 
 type ProductType = {
   id: `${string}-${string}-${string}-${string}-${string}`
@@ -36,12 +37,7 @@ export default function Product({ product }: { product: ProductType }) {
           <h3 className="font-bold">{product.name}</h3>
           <p className="text-xs font-normal leading-5">{product.description}</p>
           <p className="font-bold">{product.price}</p>
-          <button
-            className="rounded-md bg-violet-400 px-4 py-2 text-white"
-            onClick={handleClick}
-          >
-            See more
-          </button>
+          <Button onClick={handleClick}>See more</Button>
         </div>
       </div>
       <Modal

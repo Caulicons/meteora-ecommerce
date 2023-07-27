@@ -21,7 +21,7 @@ import desktopJaquetaJeans from '@images/Desktop/Imagens cards/jaqueta jeans.png
 import desktopOculos from '@images/Desktop/Imagens cards/Oculos.png'
 import desktopTenis from '@images/Desktop/Imagens cards/tenis.png'
 
-export const products =  [
+export const products = [
   {
     id: randomUUID(),
     name: 'Comfort shirt',
@@ -33,13 +33,128 @@ export const products =  [
       tablet: tabletCamiseta,
       desktop: desktopCamiseta,
     },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
   {
     id: randomUUID(),
     name: 'Tailor Paints',
-    description: 'Wide Leg tailoring model in linen, unissex. A piece for life!',
+    description:
+      'Wide Leg tailoring model in linen, unissex. A piece for life!',
     price: 'R$ 180,00',
     image: { mobile: mobileCalça, tablet: tabletCalça, desktop: desktopCalça },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
   {
     id: randomUUID(),
@@ -48,6 +163,63 @@ export const products =  [
       'casual Snicker with a higher sole and a chunky fit. Unisex model.',
     price: 'R$ 250,00',
     image: { mobile: mobileTenis, tablet: tabletTenis, desktop: desktopTenis },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
   {
     id: randomUUID(),
@@ -60,6 +232,63 @@ export const products =  [
       tablet: tabletJaquetaJeans,
       desktop: desktopJaquetaJeans,
     },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
   {
     id: randomUUID(),
@@ -71,6 +300,63 @@ export const products =  [
       tablet: tabletOculos,
       desktop: desktopOculos,
     },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
   {
     id: randomUUID(),
@@ -79,5 +365,62 @@ export const products =  [
       'Camel bag in high-quality synthetic leather. Ideal to accompany for a lifetime!',
     price: 'R$ 120,00',
     image: { mobile: mobileBolsa, tablet: tabletBolsa, desktop: desktopBolsa },
+    options: [
+      {
+        id: 'colors',
+        legend: 'Colors',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'Light blue',
+            value: 'light blue',
+            colorBackground: '#75D7F0',
+          },
+          {
+            id: randomUUID(),
+            name: 'OffWhite',
+            value: 'off white',
+            colorBackground: '#F3F6F7',
+          },
+          {
+            id: randomUUID(),
+            name: 'Black',
+            value: 'black',
+            colorBackground: '#000000',
+          },
+        ],
+      },
+      {
+        id: 'sizes',
+        legend: 'Sizes',
+        details: [
+          {
+            id: randomUUID(),
+            name: 'XS',
+            value: 'XS',
+          },
+          {
+            id: randomUUID(),
+            name: 'S',
+            value: 'S',
+          },
+          {
+            id: randomUUID(),
+            name: 'M',
+            value: 'M',
+          },
+          {
+            id: randomUUID(),
+            name: 'L',
+            value: 'L',
+          },
+          {
+            id: randomUUID(),
+            name: 'XL',
+            value: 'XL',
+          },
+        ],
+      },
+    ],
   },
 ]

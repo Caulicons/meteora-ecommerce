@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useCallback, useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import checkIcon from '@images/icon/checkIconModelProduct.svg'
 import closeIcon from '@images/icon/closeIconProductModel.svg'
 import Image from 'next/image'
@@ -30,7 +30,7 @@ export default function Modal({ children, show, onClose, title }: modalProps) {
   return (
     <div
       onClick={onClose}
-      className={`fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center overflow-y-auto overflow-x-hidden bg-slate-500/70  ${
+      className={`fixed bottom-0 left-0 right-0 top-0 flex justify-center overflow-y-auto bg-slate-500/70 sm:items-center ${
         show
           ? 'pointer-events-auto opacity-100'
           : 'pointer-events-none hidden opacity-0 transition-all duration-300 ease-in-out'
@@ -46,20 +46,15 @@ export default function Modal({ children, show, onClose, title }: modalProps) {
         }
         `}
       >
-        <div className=" w-full max-w-[700px] flex flex-col items-center">
-          <div className="flex items-center justify-between gap-5 bg-black p-4 text-left min-h-[65px]">
-            <div className="flex  gap-5">
+        <div className="flex w-full max-w-[700px] flex-col ">
+          <div className="flex w-full items-center justify-between gap-5 bg-black p-4 text-left">
+            <div className="flex items-center gap-5">
               <Image src={checkIcon} alt="check Icon" width={32} height={32} />
               <p className="text-xl font-medium leading-5 text-white">
                 {title}
               </p>
             </div>
-            <Image
-              src={closeIcon}
-              alt="close icon"
-              width={16}
-              height={16}
-            />
+            <Image src={closeIcon} alt="close icon" width={16} height={16} className='' onClick={onClose}/>
           </div>
           {children}
         </div>

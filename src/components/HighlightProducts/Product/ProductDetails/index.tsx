@@ -1,5 +1,6 @@
-import Fieldset from '@/components/Inputs/Fieldset'
-import InputRadio from '@/components/Inputs/Radio'
+
+import Fieldset from '@/components/Basic/Inputs/Fieldset'
+import InputRadio from '@/components/Basic/Inputs/Radio'
 import ProductInterface from '@/interfaces/Product'
 import React, { ChangeEvent } from 'react'
 import { FieldValues, UseFormRegister, FieldErrors } from 'react-hook-form/dist/types'

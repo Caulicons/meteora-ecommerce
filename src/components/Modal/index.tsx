@@ -1,16 +1,16 @@
-import { useCallback, useEffect } from 'react'
+import { ComponentProps, useCallback, useEffect } from 'react'
 import checkIcon from '@images/icon/checkIconModelProduct.svg'
 import closeIcon from '@images/icon/closeIconProductModel.svg'
 import Image from 'next/image'
 
-interface modalProps {
+interface modalProps extends ComponentProps<'div'>{
   show: boolean
   children: React.ReactNode
   onClose: () => void
   title: string
-}
+} 
 
-export default function Modal({ children, show, onClose, title }: modalProps) {
+export default function Modal({ children, show, onClose, title, className }: modalProps) {
   const closeOnEscapeKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape' && onClose) {
@@ -30,7 +30,7 @@ export default function Modal({ children, show, onClose, title }: modalProps) {
   return (
     <div
       onClick={onClose}
-      className={`fixed bottom-0 left-0 right-0 top-0 flex justify-center overflow-y-auto bg-slate-500/70 sm:items-center ${
+      className={`fixed bottom-0 left-0 right-0 top-0 flex justify-center  overflow-y-auto bg-slate-500/70 sm:items-center ${className}  ${
         show
           ? 'pointer-events-auto opacity-100'
           : 'pointer-events-none hidden opacity-0 transition-all duration-300 ease-in-out'
@@ -46,7 +46,7 @@ export default function Modal({ children, show, onClose, title }: modalProps) {
         }
         `}
       >
-        <div className="flex w-full max-w-[700px] flex-col ">
+        <div className="flex w-full max-w-[700px] flex-col  ">
           <div className="flex w-full items-center justify-between gap-5 bg-black p-4 text-left">
             <div className="flex items-center gap-5">
               <Image src={checkIcon} alt="check Icon" width={32} height={32} />

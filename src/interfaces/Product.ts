@@ -6,9 +6,9 @@ export default interface ProductInterface {
   description: string
   price: string
   image: {
-    mobile: StaticImageData
-    tablet: StaticImageData
-    desktop: StaticImageData
+    mobile: string
+    tablet: string
+    desktop: string
   }
   options?: [
     {

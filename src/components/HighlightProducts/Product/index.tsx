@@ -1,10 +1,10 @@
 'use client'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
 import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
-import ProductModel from './ProductModel'
+import { useEffect, useState } from 'react'
+import ProductModel from './ProductModal'
 import Modal from '@/components/Modal'
-import Button from '@/components/Inputs/Button'
+import Button from '@/components/Basic/Inputs/Button'
+import { useWhichScreen } from '@/utils/hooks/useHandleResize'
 
 type ProductType = {
   id: `${string}-${string}-${string}-${string}-${string}`
@@ -12,26 +12,29 @@ type ProductType = {
   description: string
   price: string
   image: {
-    mobile: StaticImageData
-    tablet: StaticImageData
-    desktop: StaticImageData
+    mobile: string
+    tablet: string
+    desktop: string
   }
 }
 
 export default function Product({ product }: { product: ProductType }) {
   const [showProductModel, setShowProductModel] = useState(false)
   const whichScreen = useWhichScreen()
-
+  console.log('product', product)
   const handleClick = () => {
     setShowProductModel((state) => !state)
   }
+
   return (
     <>
       <div className="w-auto max-w-[323px] bg-white ">
         <Image
-          src={product.image[whichScreen]}
+          src={product?.image?.[whichScreen]}
           alt="product"
           className="max-h-[389px]"
+          width={600}
+          height={600}
         />
         <div className="space-y-4 rounded-lg border border-t-0 border-solid border-x-black/10 border-b-black/10 px-4 py-3">
           <h3 className="font-bold">{product.name}</h3>

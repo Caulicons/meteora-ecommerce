@@ -1,16 +1,16 @@
 'use client'
 import Image from 'next/image'
-import Button from '@/components/Inputs/Button'
 import ProductInterface from '@/interfaces/Product'
 import ProductDetails from '../ProductDetails'
 import { useForm } from 'react-hook-form'
+import Button from '@/components/Basic/Inputs/Button'
 
 type formProductCheck = {
   colors: string
   sizes: string
 }
 
-export default function ProductModel({
+export default function ProductModal({
   product,
 }: {
   product: ProductInterface
@@ -27,9 +27,11 @@ export default function ProductModel({
   return (
     <div className="flex flex-wrap bg-white p-4 pb-8 shadow-md sm:flex-nowrap sm:pb-8">
       <Image
-        src={product.image.desktop}
+        src={product?.image?.desktop}
         alt="product"
         className="h-[422px] w-full sm:h-[350px]"
+        width={200}
+        height={200}
         style={{ objectFit: 'cover' }}
       />
       <form

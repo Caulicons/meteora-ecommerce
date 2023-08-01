@@ -1,0 +1,579 @@
+{
+  "products": [
+    {
+      "id": "a014e712-4b7c-11ec-9621-0242ac130002",
+      "name": "Comfort shirt",
+      "description": "Multicolor and sizes. 100% cotton fabric, fresh for summer. Unisex modeling.",
+      "price": "R$ 70,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/camiseta.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/camiseta.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/camiseta.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a014e912-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a014e9ca-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a014eab6-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a014ebd6-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a014ec6a-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a014ecf2-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a014ed78-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a014ee00-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a014ee7e-4b7c-11ec-9621-0242ac130002",
+      "name": "Tailor Paints",
+      "description": "Wide Leg tailoring model in linen, unissex. A piece for life!",
+      "price": "R$ 180,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/calça.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/calça.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/calça.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a014ef22-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a014ef9e-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a014f01a-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a014f098-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a014f116-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a014f18e-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a014f206-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a014f280-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a014f2f2-4b7c-11ec-9621-0242ac130002",
+      "name": "Chuncky tennis",
+      "description": "casual Snicker with a higher sole and a chunky fit. Unisex model.",
+      "price": "R$ 250,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/tenis.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/tenis.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/tenis.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a014f366-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a014f3e4-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a014f462-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a014f4e6-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a014f560-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a014f5da-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a014f654-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a014f6d2-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a014f74c-4b7c-11ec-9621-0242ac130002",
+      "name": "Denim jacket",
+      "description": "Oversized unisex model with a suede collar. Timeless and authentic.",
+      "price": "R$ 150,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/jaqueta jeans.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/jaqueta jeans.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/jaqueta jeans.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a014f7c6-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a014f840-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a014f8bc-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a014f936-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a014f9b2-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a014fa32-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a014faae-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a014fb28-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a014fb9a-4b7c-11ec-9621-0242ac130002",
+      "name": "Round Glasses",
+      "description": "Graphite metal frame with rounded lenses. No mistake!",
+      "price": "R$ 120,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/Oculos.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/Oculos.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/Oculos.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a014fc22-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a014fc9a-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a014fd0c-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a014fd84-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a014fe00-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a014fe78-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a014fef2-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a014ff64-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a0150056-4b7c-11ec-9621-0242ac130002",
+      "name": "Joker bag",
+      "description": "Camel bag in high-quality synthetic leather. Ideal to accompany for a lifetime!",
+      "price": "R$ 120,00",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Imagens cards/bolsa.png",
+        "tablet": "/assets/imgs/Tablet/Imagens cards/bolsa.png",
+        "desktop": "/assets/imgs/Desktop/Imagens cards/bolsa.png"
+      },
+      "options": [
+        {
+          "id": "colors",
+          "legend": "Colors",
+          "details": [
+            {
+              "id": "a01500ce-4b7c-11ec-9621-0242ac130002",
+              "name": "Light blue",
+              "value": "light blue",
+              "colorBackground": "#75D7F0"
+            },
+            {
+              "id": "a015014c-4b7c-11ec-9621-0242ac130002",
+              "name": "OffWhite",
+              "value": "off white",
+              "colorBackground": "#F3F6F7"
+            },
+            {
+              "id": "a01501c2-4b7c-11ec-9621-0242ac130002",
+              "name": "Black",
+              "value": "black",
+              "colorBackground": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "sizes",
+          "legend": "Sizes",
+          "details": [
+            {
+              "id": "a015023c-4b7c-11ec-9621-0242ac130002",
+              "name": "XS",
+              "value": "XS"
+            },
+            {
+              "id": "a01502b2-4b7c-11ec-9621-0242ac130002",
+              "name": "S",
+              "value": "S"
+            },
+            {
+              "id": "a015031a-4b7c-11ec-9621-0242ac130002",
+              "name": "M",
+              "value": "M"
+            },
+            {
+              "id": "a015038a-4b7c-11ec-9621-0242ac130002",
+              "name": "L",
+              "value": "L"
+            },
+            {
+              "id": "a0150414-4b7c-11ec-9621-0242ac130002",
+              "name": "XL",
+              "value": "XL"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": {
+    "mobile": [
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria casacos.png",
+        "name": "Casacos"
+      },
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria bolsas.png",
+        "name": "Bolsas"
+      },
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria calçados.png",
+        "name": "Calçados"
+      },
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria calças.png",
+        "name": "Calças"
+      },
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria camisetas.png",
+        "name": "Camisetas"
+      },
+      {
+        "image": "/assets/imgs/Mobile/Categorias/Categoria óculos.png",
+        "name": "Óculos"
+      }
+    ],
+    "tablet": [
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria casacos.png",
+        "name": "Casacos"
+      },
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria bolsas.png",
+        "name": "Bolsas"
+      },
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria calçados.png",
+        "name": "Calçados"
+      },
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria calças.png",
+        "name": "Calças"
+      },
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria camisetas.png",
+        "name": "Camisetas"
+      },
+      {
+        "image": "/assets/imgs/Tablet/Categorias/Categoria óculos.png",
+        "name": "Óculos"
+      }
+    ],
+    "desktop": [
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria casacos.png",
+        "name": "Casacos"
+      },
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria bolsas.png",
+        "name": "Bolsas"
+      },
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria calçados.png",
+        "name": "Calçados"
+      },
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria calças.png",
+        "name": "Calças"
+      },
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria camisetas.png",
+        "name": "Camisetas"
+      },
+      {
+        "image": "/assets/imgs/Desktop/Categorias/Categoria óculos.png",
+        "name": "Óculos"
+      }
+    ]
+  },
+  "banners": {
+    "mobile": [
+      {
+        "id": 1,
+        "image": "/assets/imgs/Mobile/Banner_carousel 1 _ 375.png",
+        "vitrine": 0,
+        "info": { "position": "", "slug": "", "description": "" }
+      },
+      {
+        "id": 2,
+        "image": "/assets/imgs/Mobile/Banner carousel 2 _ 375.png",
+        "vitrine": 1,
+        "info": {
+          "position": "right",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Estilo e qualidade para durar."
+        }
+      },
+      {
+        "id": 3,
+        "image": "/assets/imgs/Mobile/Banner carousel 3 _ 375.png",
+        "vitrine": 2,
+        "info": {
+          "position": "left",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Alto impacto visual, baixo impacto ambiental!"
+        }
+      }
+    ],
+    "tablet": [
+      {
+        "id": 4,
+        "image": "/assets/imgs/Tablet/Banner carousel 1 _ 768.png",
+        "vitrine": 0,
+        "info": { "position": "", "slug": "", "description": "" }
+      },
+      {
+        "id": 5,
+        "image": "/assets/imgs/Tablet/Banner carousel 2 _ 768.png",
+        "vitrine": 1,
+        "info": {
+          "position": "right",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Estilo e qualidade para durar."
+        }
+      },
+      {
+        "id": 6,
+        "image": "/assets/imgs/Tablet/Banner carousel 3 _ 768.png",
+        "vitrine": 2,
+        "info": {
+          "position": "left",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Alto impacto visual, baixo impacto ambiental!"
+        }
+      }
+    ],
+    "desktop": [
+      {
+        "id": 7,
+        "image": "/assets/imgs/Desktop/Banner carousel 1 _ 1440.png",
+        "vitrine": 0,
+        "info": { "position": "", "slug": "", "description": "" }
+      },
+      {
+        "id": 8,
+        "image": "/assets/imgs/Desktop/Banner carousel 2 _ 1440.png",
+        "vitrine": 1,
+        "info": {
+          "position": "right",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Estilo e qualidade para durar"
+        }
+      },
+      {
+        "id": 9,
+        "image": "/assets/imgs/Desktop/Banner carousel 3 _ 1440.png",
+        "vitrine": 2,
+        "info": {
+          "position": "left",
+          "slug": "COLEÇÃO ATEMPORAL",
+          "description": "Alto impacto visual, baixo impacto ambiental!"
+        }
+      }
+    ],
+    "quantity": 3
+  }
+}

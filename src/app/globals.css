@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-
-  
   .no-display-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
-  .carousel-center{
+  .carousel-center {
     scroll-snap-align: start;
   }
 

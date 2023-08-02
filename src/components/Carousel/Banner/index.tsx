@@ -24,7 +24,7 @@ export default function Banner ({ banner }: BannerProps  ) {
         src={banner.image}
         alt="banner"
         className={`slide h-auto max-h-[415px] w-full shrink-0 transition-all duration-700 ease-in-out `}
-        style={{ objectFit: 'cover' }}
+        style={{ objectFit: 'cover', width: 'full', height: 'full' }}
         width={200} height={200}
         priority
       />

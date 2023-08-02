@@ -21,7 +21,7 @@ export default function HighlightProducts() {
     })
   }, [])
   return (
-    <section className="">
+    <section className="mx-6 tablet:m-0">
       <h2 className="mb-6 text-center text-[32px] font-medium text-subTitle tablet:text-[32px] ">
         Highlight Products 🔥
       </h2>

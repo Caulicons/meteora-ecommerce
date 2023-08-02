@@ -28,10 +28,10 @@ export default function FindCategory() {
 
   // Handle search
   return (
-    <section className="space-y-9 text-center">
+    <section className="space-y-9 text-center mx-6 tablet:mx-0">
       <h2 className="text-[32px] font-medium text-subTitle tablet:text-[32px]">
         Search for category:
-      </h2>
+      </h2> 
       <div className="grid grid-cols-2 justify-items-center gap-6 tablet:grid-cols-3 xl:grid-cols-6">
         {categories?.[whichScreen]?.map((category, i) => {
           return (

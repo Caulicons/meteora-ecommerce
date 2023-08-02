@@ -21,7 +21,6 @@ type ProductType = {
 export default function Product({ product }: { product: ProductType }) {
   const [showProductModel, setShowProductModel] = useState(false)
   const whichScreen = useWhichScreen()
-  console.log('product', product)
   const handleClick = () => {
     setShowProductModel((state) => !state)
   }

@@ -2,6 +2,7 @@ import NavBar from '@/components/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
+import ProductsContext from '@/utils/context/productsContext'
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-inter`}>
       <body className="grid h-screen w-full grid-cols-1 bg-white text-black transition-all">
-        <NavBar />
-        {children}
-        <Footer />
+        <ProductsContext>
+          <NavBar />
+          {children}
+          <Footer />
+        </ProductsContext>
       </body>
     </html>
   )

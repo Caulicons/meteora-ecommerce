@@ -1,22 +1,11 @@
 'use client'
-import Image, { StaticImageData } from 'next/image'
-import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { useState } from 'react'
 import ProductModel from './ProductModal'
 import Modal from '@/components/Modal'
 import Button from '@/components/Basic/Inputs/Button'
 import { useWhichScreen } from '@/utils/hooks/useHandleResize'
-
-type ProductType = {
-  id: `${string}-${string}-${string}-${string}-${string}`
-  name: string
-  description: string
-  price: string
-  image: {
-    mobile: string
-    tablet: string
-    desktop: string
-  }
-}
+import ProductType from '@/utils/types/productType'
 
 export default function Product({ product }: { product: ProductType }) {
   const [showProductModel, setShowProductModel] = useState(false)

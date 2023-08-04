@@ -1,20 +1,16 @@
 'use client'
 import Image from 'next/image'
-import ProductInterface from '@/interfaces/Product'
 import ProductDetails from '../ProductDetails'
 import { useForm } from 'react-hook-form'
 import Button from '@/components/Basic/Inputs/Button'
+import ProductType from '@/utils/types/productType'
 
 type formProductCheck = {
   colors: string
   sizes: string
 }
 
-export default function ProductModal({
-  product,
-}: {
-  product: ProductInterface
-}) {
+export default function ProductModal({ product }: { product: ProductType }) {
   const {
     register,
     handleSubmit,
@@ -22,7 +18,7 @@ export default function ProductModal({
   } = useForm<formProductCheck>()
 
   function onSubmitButton(data: any) {
-    console.log({...product, options: data})
+    console.log({ ...product, options: data })
   }
   return (
     <div className="flex flex-wrap bg-white p-4 pb-8 shadow-md sm:flex-nowrap sm:pb-8">
@@ -54,7 +50,7 @@ export default function ProductModal({
                 key={option.id}
                 register={register}
                 error={errors}
-                option={option}
+                options={option}
               />
             )
           })}

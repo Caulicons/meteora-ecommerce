@@ -4,6 +4,7 @@
       "id": "a014e712-4b7c-11ec-9621-0242ac130002",
       "name": "Comfort shirt",
       "description": "Multicolor and sizes. 100% cotton fabric, fresh for summer. Unisex modeling.",
+      "category": "shirts",
       "price": "R$ 70,00",
       "image": {
         "mobile": "/assets/imgs/Mobile/Imagens cards/camiseta.png",
@@ -70,9 +71,10 @@
     },
     {
       "id": "a014ee7e-4b7c-11ec-9621-0242ac130002",
-      "name": "Tailor Paints",
+      "name": "Tailor Pants",
       "description": "Wide Leg tailoring model in linen, unissex. A piece for life!",
       "price": "R$ 180,00",
+      "category": "pants",
       "image": {
         "mobile": "/assets/imgs/Mobile/Imagens cards/calça.png",
         "tablet": "/assets/imgs/Tablet/Imagens cards/calça.png",
@@ -141,6 +143,8 @@
       "name": "Chuncky tennis",
       "description": "casual Snicker with a higher sole and a chunky fit. Unisex model.",
       "price": "R$ 250,00",
+      "category": "tennis",
+
       "image": {
         "mobile": "/assets/imgs/Mobile/Imagens cards/tenis.png",
         "tablet": "/assets/imgs/Tablet/Imagens cards/tenis.png",
@@ -209,6 +213,7 @@
       "name": "Denim jacket",
       "description": "Oversized unisex model with a suede collar. Timeless and authentic.",
       "price": "R$ 150,00",
+      "category": "jackets",
       "image": {
         "mobile": "/assets/imgs/Mobile/Imagens cards/jaqueta jeans.png",
         "tablet": "/assets/imgs/Tablet/Imagens cards/jaqueta jeans.png",
@@ -275,6 +280,8 @@
     {
       "id": "a014fb9a-4b7c-11ec-9621-0242ac130002",
       "name": "Round Glasses",
+      "category": "glasses",
+
       "description": "Graphite metal frame with rounded lenses. No mistake!",
       "price": "R$ 120,00",
       "image": {
@@ -345,6 +352,8 @@
       "name": "Joker bag",
       "description": "Camel bag in high-quality synthetic leather. Ideal to accompany for a lifetime!",
       "price": "R$ 120,00",
+      "category": "bags",
+
       "image": {
         "mobile": "/assets/imgs/Mobile/Imagens cards/bolsa.png",
         "tablet": "/assets/imgs/Tablet/Imagens cards/bolsa.png",
@@ -413,79 +422,79 @@
     "mobile": [
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria casacos.png",
-        "name": "Casacos"
+        "name": "Jackets"
       },
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria bolsas.png",
-        "name": "Bolsas"
+        "name": "Bags"
       },
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria calçados.png",
-        "name": "Calçados"
+        "name": "Tennis"
       },
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria calças.png",
-        "name": "Calças"
+        "name": "Pants"
       },
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria camisetas.png",
-        "name": "Camisetas"
+        "name": "Shirts"
       },
       {
         "image": "/assets/imgs/Mobile/Categorias/Categoria óculos.png",
-        "name": "Óculos"
+        "name": "Glasses"
       }
     ],
     "tablet": [
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria casacos.png",
-        "name": "Casacos"
+        "name": "Jackets"
       },
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria bolsas.png",
-        "name": "Bolsas"
+        "name": "Bags"
       },
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria calçados.png",
-        "name": "Calçados"
+        "name": "Tennis"
       },
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria calças.png",
-        "name": "Calças"
+        "name": "Pants"
       },
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria camisetas.png",
-        "name": "Camisetas"
+        "name": "Shirts"
       },
       {
         "image": "/assets/imgs/Tablet/Categorias/Categoria óculos.png",
-        "name": "Óculos"
+        "name": "Glasses"
       }
     ],
     "desktop": [
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria casacos.png",
-        "name": "Casacos"
+        "name": "Jackets"
       },
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria bolsas.png",
-        "name": "Bolsas"
+        "name": "Bags"
       },
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria calçados.png",
-        "name": "Calçados"
+        "name": "Tennis"
       },
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria calças.png",
-        "name": "Calças"
+        "name": "Pants"
       },
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria camisetas.png",
-        "name": "Camisetas"
+        "name": "Shirts"
       },
       {
         "image": "/assets/imgs/Desktop/Categorias/Categoria óculos.png",
-        "name": "Óculos"
+        "name": "Glasses"
       }
     ]
   },

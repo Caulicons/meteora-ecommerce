@@ -4,8 +4,9 @@ import logoDesktop from '@images/Desktop/Logo_desktop.png'
 import logoMobile from '@images/Mobile/Logo_mobile.png'
 import LogoTablet from '@images/Tablet/Logo_tablet.png'
 import hamburger from '@images/icon/hamburger.png'
-import { useState } from 'react'
+import { ChangeEvent, useContext, useState } from 'react'
 import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { ProductsContext } from '@/utils/context/productsContext'
 
 const links = [
   { name: 'Home', url: '', active: true },
@@ -17,9 +18,18 @@ const links = [
 export default function NavBar() {
   const widthScreen = useWhichScreen()
   const [showHamburger, setShowHamburger] = useState(false)
+  const productContext = useContext(ProductsContext)
 
   const handleBurguerToggle = () => {
     setShowHamburger((show) => !show)
+  }
+
+  const handleSearchBar = (e: ChangeEvent<HTMLInputElement>) => {
+    const searchedProducts = productContext.allProducts.filter((product) =>
+      product.name.toLowerCase().includes(e.target.value.toLowerCase()),
+    )
+
+    productContext.setProductsToShow(searchedProducts)
   }
 
   return (
@@ -85,6 +95,9 @@ export default function NavBar() {
           type="text"
           placeholder="Find products"
           className="w-11/12 max-w-[225px] border-2 border-black px-3 py-2 text-black hover:border-gray"
+          onChange={(e) => {
+            handleSearchBar(e)
+          }}
         />
         <button className="w:auto transparent border-2 border-black p-2 font-bold text-black hover:bg-black hover:text-white tablet:border-white tablet:font-normal tablet:text-white">
           Search

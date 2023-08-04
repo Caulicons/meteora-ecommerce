@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
-import ProductModel from './ProductModal'
+import ProductModel from '../../Modal/ProductModal'
 import Modal from '@/components/Modal'
 import Button from '@/components/Basic/Inputs/Button'
 import { useWhichScreen } from '@/utils/hooks/useHandleResize'

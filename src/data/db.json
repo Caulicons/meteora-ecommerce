@@ -418,86 +418,56 @@
       ]
     }
   ],
-  "categories": {
-    "mobile": [
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria casacos.png",
-        "name": "Jackets"
-      },
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria bolsas.png",
-        "name": "Bags"
-      },
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria calçados.png",
-        "name": "Tennis"
-      },
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria calças.png",
-        "name": "Pants"
-      },
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria camisetas.png",
-        "name": "Shirts"
-      },
-      {
-        "image": "/assets/imgs/Mobile/Categorias/Categoria óculos.png",
-        "name": "Glasses"
+  "categories": [
+    {
+      "name": "Jackets",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria casacos.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria casacos.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria casacos.png"
       }
-    ],
-    "tablet": [
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria casacos.png",
-        "name": "Jackets"
-      },
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria bolsas.png",
-        "name": "Bags"
-      },
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria calçados.png",
-        "name": "Tennis"
-      },
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria calças.png",
-        "name": "Pants"
-      },
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria camisetas.png",
-        "name": "Shirts"
-      },
-      {
-        "image": "/assets/imgs/Tablet/Categorias/Categoria óculos.png",
-        "name": "Glasses"
+    },
+    {
+      "name": "Bags",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria bolsas.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria bolsas.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria bolsas.png"
       }
-    ],
-    "desktop": [
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria casacos.png",
-        "name": "Jackets"
-      },
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria bolsas.png",
-        "name": "Bags"
-      },
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria calçados.png",
-        "name": "Tennis"
-      },
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria calças.png",
-        "name": "Pants"
-      },
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria camisetas.png",
-        "name": "Shirts"
-      },
-      {
-        "image": "/assets/imgs/Desktop/Categorias/Categoria óculos.png",
-        "name": "Glasses"
+    },
+    {
+      "name": "Tennis",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria calçados.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria calçados.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria calçados.png"
       }
-    ]
-  },
+    },
+    {
+      "name": "Pants",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria calças.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria calças.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria calças.png"
+      }
+    },
+    {
+      "name": "Shirts",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria camisetas.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria camisetas.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria camisetas.png"
+      }
+    },
+    {
+      "name": "Glasses",
+      "image": {
+        "mobile": "/assets/imgs/Mobile/Categorias/Categoria óculos.png",
+        "tablet": "/assets/imgs/Tablet/Categorias/Categoria óculos.png",
+        "desktop": "/assets/imgs/Desktop/Categorias/Categoria óculos.png"
+      }
+    }
+  ],
   "banners": {
     "mobile": [
       {

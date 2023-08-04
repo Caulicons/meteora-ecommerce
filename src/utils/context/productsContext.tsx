@@ -20,15 +20,12 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([])
   const [productsToShow, setProductsToShow] = useState<ProductType[]>([])
   useEffect(() => {
-    // Fetch products from API and update state
-  console.log('render ProductContext')
-
     const fetchProducts = async () => {
       const data = await axios
         .get('http://localhost:3001/products')
         .then((res) => res.data as ProductType[])
         .catch((err) => console.log(err))
-    if (typeof data === 'undefined') {
+      if (typeof data === 'undefined') {
         setAllProducts(productsData)
         setProductsToShow(productsData)
         return

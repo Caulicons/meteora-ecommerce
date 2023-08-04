@@ -29,11 +29,16 @@ export default function NavBar() {
       product.name.toLowerCase().includes(e.target.value.toLowerCase()),
     )
 
+    if (e.target.value === '') {
+      console.log('pass')
+      productContext.setProductsToShow(productContext.allProducts)
+      return
+    }
     productContext.setProductsToShow(searchedProducts)
   }
 
   return (
-    <nav className="flex h-fit min-h-[58px] w-full flex-wrap bg-black text-white tablet:flex-nowrap tablet:px-6">
+    <nav className="flex bg-black text-white  tablet:px-6 ">
       <div className="flex min-h-[58px] w-full items-center justify-between px-4 tablet:justify-start tablet:gap-4">
         <Image
           src={
@@ -45,12 +50,12 @@ export default function NavBar() {
           }
           alt="Logo"
         />
-        <ul className="hidden flex-row gap-6 bg-inherit tablet:flex">
+        <ul className="hidden flex-row gap-6  tablet:flex ">
           {links.map((link) => (
             <li key={link.name}>
               <a
                 href={link.url}
-                className={`duration-12000 transition ease-in-out ${
+                className={`transition duration-700 ease-in-out ${
                   link.active ? 'text-green' : 'text-white '
                 } hover:border-b-2 hover:border-green hover:text-green`}
               >
@@ -60,9 +65,9 @@ export default function NavBar() {
           ))}
         </ul>
         {showHamburger ? (
-          <ul className="absolute right-0 top-0 z-10 flex flex-col bg-gray px-6 py-4 tablet:hidden">
+          <ul className="absolute right-0 top-0 z-10 flex flex-col bg-gray px-6 py-10 pt-1 tablet:hidden ">
             <span
-              className="cursor-pointer self-end p-1 text-xl text-green tablet:hidden"
+              className=" cursor-pointer self-end p-2 pl-6 pr-0 text-2xl text-green "
               onClick={handleBurguerToggle}
             >
               X
@@ -70,7 +75,7 @@ export default function NavBar() {
             {links.map((link) => (
               <li
                 key={link.name}
-                className="mb-3 border-b-2 border-[#6C757D] hover:border-green tablet:mb-0 tablet:border-none"
+                className="mb-2 border-b-2 border-[#6C757D] pb-2 hover:border-green tablet:mb-0 tablet:border-none"
               >
                 <a
                   href={link.url}
@@ -86,20 +91,22 @@ export default function NavBar() {
             src={hamburger}
             alt="options"
             onClick={handleBurguerToggle}
-            className="h-[18px] w-[18px] cursor-pointer tablet:hidden"
+            className=" cursor-pointer tablet:hidden"
+            width={18}
+            height={18}
           />
         )}
       </div>
-      <div className="flex h-auto w-full justify-center gap-3 bg-white px-7 py-6 tablet:my-2 tablet:w-auto tablet:min-w-[170px] tablet:bg-inherit tablet:px-0 tablet:py-0">
+      <div className="hidden items-center gap-3 tablet:flex">
         <input
           type="text"
           placeholder="Find products"
-          className="w-11/12 max-w-[225px] border-2 border-black px-3 py-2 text-black hover:border-gray"
+          className="w-full  px-3 py-2 text-black"
           onChange={(e) => {
             handleSearchBar(e)
           }}
         />
-        <button className="w:auto transparent border-2 border-black p-2 font-bold text-black hover:bg-black hover:text-white tablet:border-white tablet:font-normal tablet:text-white">
+        <button className="border-2  p-2 hover:bg-zinc-500/50 active:bg-zinc-800 ">
           Search
         </button>
       </div>

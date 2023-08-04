@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { ComponentProps } from 'react'
 
 interface BannerProps extends ComponentProps<'div'> {
@@ -11,31 +11,31 @@ interface BannerProps extends ComponentProps<'div'> {
       slug: string
       description: string
     }
-  },
+  }
 }
-export default function Banner ({ banner }: BannerProps  ) {
- 
+export default function Banner({ banner }: BannerProps) {
   return (
     <div
       key={banner.id}
-      className="relative flex w-full flex-none snap-start items-center justify-center "
+      className="relative flex w-full flex-none snap-start items-center justify-center"
     >
       <Image
         src={banner.image}
         alt="banner"
-        className={`slide h-auto max-h-[415px] w-full shrink-0 transition-all duration-700 ease-in-out `}
-        style={{ objectFit: 'cover', width: 'full', height: 'full' }}
-        width={200} height={200}
+        className={`slide max-h-[415px] w-full`}
+        style={{ objectFit: 'cover' }}
+        width={1440}
+        height={1440}
         priority
       />
       <div
-        className={`absolute mt-[45%]  w-9/12 text-center phone:mt-[25%] tablet:mt-auto  ${
+        className={`absolute mt-[45%] w-9/12 text-center phone:mt-[25%] tablet:mt-auto ${
           banner.info.position === 'right'
-            ? 'phone:text-right '
+            ? 'phone:text-right'
             : 'phone:text-left'
         }`}
       >
-        <h1 className="text-[32px] font-medium text-white tablet:text-[48px]">
+        <h1 className="text-4xl font-medium text-white tablet:text-5xl">
           {banner.info.slug}
         </h1>
         <p className="text-white">{banner.info.description}</p>
@@ -43,4 +43,3 @@ export default function Banner ({ banner }: BannerProps  ) {
     </div>
   )
 }
-

@@ -5,15 +5,22 @@ export const useWhichScreen = () => {
     'mobile' | 'tablet' | 'desktop'
   >(handleResize())
 
-  window.addEventListener('resize', () => {
-    setWhichScreen(handleResize())
-  })
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', () => {
+      setWhichScreen(handleResize())
+    })
+  }
 
   return whichScreen
 }
 
 const handleResize = () => {
-  const isMobile = window.innerWidth < 500
-  const isTablet = window.innerWidth >= 500 && window.innerWidth <= 1280
-  return isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
+  if (typeof window !== 'undefined') {
+    const windowWidth = window.innerWidth
+    const isMobile = windowWidth < 500
+    const isTablet = windowWidth >= 500 && windowWidth <= 1280
+    return isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
+  }
+
+  return 'mobile'
 }

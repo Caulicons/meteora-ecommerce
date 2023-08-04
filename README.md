@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Meteoro page ☄️
 
-## Getting Started
+This is my project created from Alura's seven frontend challenge. The challenge is to create a page over four weeks where, each week, we receive tasks and business rules that must be fulfilled for the actual work environment simulation.
 
-First, run the development server:
+## Table of Contents
+- [Tools](#Tools)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Features](#features)
+- [Testing](#testing)
+- [Contact Information](#contact-information)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Tools 🛠️
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-  🔨 Typescript - language. 
+-  🔨 Next.js - Framework. 
+-  🔨 Tailwind CSS - Style.   
+-  🔨 Axios - Fetch. 
+-  🔨 React Hook Forms - Custom Forms.
+-  🔨 Eslint - .
+-  🔨 json-serve - mock server.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To install and set up this project, follow these steps:
 
-## Learn More
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install the dependencies.
+4. Run `npm mock-server` to start the mock serve.
+4. Run `npm dev` to start the application.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Management: Create, retrieve, update, and delete - movies, categories and users.
+- Authentication: Secure endpoints with JWT-based authentication.
+- Section free: endpoint to see free movies.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Acquire Knowledge    
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For question, feedbacks or bugs reports you can contact me from [email](caulicons.jobs@gmail.com) or [Instagram](https://www.instagram.com/caulicons_/).

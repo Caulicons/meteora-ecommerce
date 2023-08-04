@@ -1,5 +1,5 @@
 'use client'
-import {  useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import leftArrow from '@images/icon/carousel/icon-arrow-left.png'
 import rightArrow from '@images/icon/carousel/icon-arrow-right.png'
@@ -19,9 +19,9 @@ interface BannerItem {
 }
 
 interface BannerData {
-  mobile: BannerItem[],
-  tablet: BannerItem[],
-  desktop: BannerItem[],
+  mobile: BannerItem[]
+  tablet: BannerItem[]
+  desktop: BannerItem[]
   quantity: number
 }
 
@@ -42,19 +42,19 @@ function Carousel() {
     number?: number,
   ) => {
     const carousel = carouselRef.current
-    const slideWidth = carousel?.clientWidth || 0
-    const quantity = banners?.quantity as number
+    const carouselWidth = carousel?.clientWidth || 0
+    const bannersQuantity = banners?.quantity as number
 
     let toShow = show
     switch (direction) {
       case 'right': {
-        const nextBanner = show + 1 > quantity - 1 ? 0 : show + 1
+        const nextBanner = show + 1 >= bannersQuantity ? 0 : show + 1
         setShow(nextBanner)
         toShow = nextBanner
         break
       }
       case 'left':
-        const previousBanner = show - 1 < 0 ? quantity - 1 : show - 1
+        const previousBanner = show - 1 <= 0 ? bannersQuantity : show - 1
         setShow(previousBanner)
         toShow = previousBanner
         break
@@ -67,22 +67,21 @@ function Carousel() {
       case 'scroll': {
         if (carousel) {
           const scrollPosition = carousel.scrollLeft
-          const toShow = Math.round(scrollPosition / slideWidth)
+          const toShow = Math.round(scrollPosition / carouselWidth)
           setShow(toShow)
         }
 
         return
       }
     }
-
     if (carousel) {
-      const scrollPosition = toShow * slideWidth
-      carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' })
+      const scrollPosition = toShow * carouselWidth
+      carousel.scrollTo({ left: scrollPosition, behavior: 'smooth'})
     }
   }
 
   return (
-    <div className="relative m-auto my-0 w-full">
+    <div className="relative">
       <div
         className="no-display-scrollbar flex snap-x snap-mandatory overflow-auto"
         ref={carouselRef}
@@ -97,14 +96,14 @@ function Carousel() {
         ))}
       </div>
       <span className="absolute bottom-3 flex w-full justify-center gap-2">
-        {banners?.[whichScreen].map((_, i) => {
+        {banners?.[whichScreen].map((_, index) => {
           return (
             <span
-              key={i}
-              className={`min-w-[33px] cursor-pointer rounded-xl p-[2px] duration-700 ease-in-out ${
-                i === show ? 'bg-white' : 'bg-slate-300 opacity-60 '
+              key={index}
+              className={`min-w-[33px] cursor-pointer rounded-xl  p-[2px] duration-700 ease-in-out ${
+                index === show ? 'bg-white' : 'bg-slate-300 opacity-60 '
               } `}
-              onClick={() => handleCarouselEvents('centralize', i)}
+              onClick={() => handleCarouselEvents('centralize', index)}
             />
           )
         })}

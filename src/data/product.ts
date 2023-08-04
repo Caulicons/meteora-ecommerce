@@ -9,9 +9,9 @@ export const products: ProductType[] = [
     price: 'R$ 70,00',
     category: 'shirts',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/camiseta.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/camiseta.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/camiseta.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/camiseta.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/camiseta.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/camiseta.png',
     },
     options: [
       {
@@ -47,9 +47,9 @@ export const products: ProductType[] = [
     price: 'R$ 180,00',
     category: 'pants',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/calça.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/calça.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/calça.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/calça.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/calça.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/calça.png',
     },
     options: [
       {
@@ -86,9 +86,9 @@ export const products: ProductType[] = [
     price: 'R$ 250,00',
     category: 'tennis',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/tenis.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/tenis.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/tenis.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/tenis.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/tenis.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/tenis.png',
     },
     options: [
       {
@@ -125,9 +125,9 @@ export const products: ProductType[] = [
     price: 'R$ 150,00',
     category: 'jackets',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/jaqueta jeans.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/jaqueta jeans.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/jaqueta jeans.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/jaqueta jeans.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/jaqueta jeans.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/jaqueta jeans.png',
     },
     options: [
       {
@@ -163,9 +163,9 @@ export const products: ProductType[] = [
     price: 'R$ 120,00',
     category: 'glasses',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/Oculos.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/Oculos.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/Oculos.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/Oculos.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/Oculos.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/Oculos.png',
     },
     options: [
       {
@@ -202,9 +202,9 @@ export const products: ProductType[] = [
     price: 'R$ 120,00',
     category: 'bags',
     image: {
-      mobile: 'assets/imgs/Mobile/Imagens cards/bolsa.png',
-      tablet: 'assets/imgs/Tablet/Imagens cards/bolsa.png',
-      desktop: 'assets/imgs/Desktop/Imagens cards/bolsa.png',
+      mobile: '/src/assets/imgs/Mobile/Imagens cards/bolsa.png',
+      tablet: '/src/assets/imgs/Tablet/Imagens cards/bolsa.png',
+      desktop: '/src/assets/imgs/Desktop/Imagens cards/bolsa.png',
     },
     options: [
       {

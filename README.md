@@ -5,41 +5,34 @@ This is my project created from Alura's seven frontend challenge. The challenge 
 ## Table of Contents
 - [Tools](#Tools)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
 - [Features](#features)
-- [Testing](#testing)
 - [Contact Information](#contact-information)
 
 ## Tools 🛠️
 
--  🔨 Typescript - language. 
--  🔨 Next.js - Framework. 
--  🔨 Tailwind CSS - Style.   
--  🔨 Axios - Fetch. 
--  🔨 React Hook Forms - Custom Forms.
--  🔨 Eslint - .
--  🔨 json-serve - mock server.
+-  🔨 Typescript
+-  🔨 Next.js 
+-  🔨 Tailwind CSS 
+-  🔨 Axios 
+-  🔨 React Hook Formsyarn 
+-  🔨 Eslint and prettier
+-  🔨 json-serve 
 
 ## Installation
 
 To install and set up this project, follow these steps:
 
 1. Clone the repository.
-2. Navigate to the project directory.
+2. In terminal, navigate to the project directory.
 3. Run `npm install` to install the dependencies.
-4. Run `npm mock-server` to start the mock serve.
-4. Run `npm dev` to start the application.
+5. Run `npm run dev` to start the application.
 
 ## Features
 
-- Management: Create, retrieve, update, and delete - movies, categories and users.
-- Authentication: Secure endpoints with JWT-based authentication.
-- Section free: endpoint to see free movies.
-
-## Acquire Knowledge    
-
+- Carousel: carousel create with vanilla javascript.
+- Modals: modal to show dynamic product and newslatter forms.
+- Search: search product by categories or name.
 
 ## Contact Information
 
-For question, feedbacks or bugs reports you can contact me from [email](caulicons.jobs@gmail.com) or [Instagram](https://www.instagram.com/caulicons_/).
+For question, feedbacks or bugs reports you can contact me from [email](caulicons.jobs@gmail.com) or [LinkedIn]([https://www.instagram.com/caulicons](https://www.linkedin.com/in/vitor-oliveira-7aa003238/)https://www.linkedin.com/in/vitor-oliveira-7aa003238/).

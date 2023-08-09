@@ -57,7 +57,12 @@ export default function Modal({
         >
           <div className="flex items-center justify-between gap-5 bg-black p-4 text-left">
             <div className="flex items-center gap-5">
-              <Image src={checkIcon} alt="check Icon" width={32} height={32} />
+              <Image
+                src={checkIcon}
+                alt="check Icon"
+                width={32}
+                height={32}
+              />
               <p className="text-xl font-medium leading-5 text-white">
                 {title}
               </p>
@@ -68,6 +73,7 @@ export default function Modal({
               width={16}
               height={16}
               onClick={onClose}
+              className="cursor-pointer"
             />
           </div>
           {children}

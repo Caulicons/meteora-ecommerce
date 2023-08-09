@@ -69,6 +69,7 @@ export default function FindCategory() {
                     width={210}
                     height={157}
                     sizes="(100vw)"
+                    style={{ width: '100%'}}
                     alt="category"
                   />
                   <p className="grid h-[35px] place-content-center bg-black text-white">

@@ -47,7 +47,7 @@ export default function InputRadio({
           backgroundColor: colorBg ? colorBg : '',
         }}
         className={twMerge(
-          `before:radius-full } m-0 grid h-[1.2em] w-[1.2em]  translate-y-[-0.075em] appearance-none place-content-center rounded-full border-[2px] border-[#DEE2E6] bg-[#F3F6F7] text-current duration-[120ms] before:h-[1.2em] before:w-[1.2em] before:scale-0 before:rounded-full before:border-4 before:border-[#9353FF] before:transition-all before:duration-300 before:ease-in-out 
+          `before:radius-full cursor-pointer m-0 grid h-[1.2em] w-[1.2em]  translate-y-[-0.075em] appearance-none place-content-center rounded-full border-[2px] border-[#DEE2E6] bg-[#F3F6F7] text-current duration-[120ms] before:h-[1.2em] before:w-[1.2em] before:scale-0 before:rounded-full before:border-4 before:border-[#9353FF] before:transition-all before:duration-300 before:ease-in-out 
         checked:before:scale-100 `,
           className,
         )}

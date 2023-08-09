@@ -36,7 +36,7 @@ export default function ProductModal({ product }: { product: ProductType }) {
             className="h-[422px] w-full sm:h-[350px]"
             width={200}
             height={200}
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', width: '100%' }}
           />
           <form
             className="grid w-full gap-4 border border-t-0 border-[#DEE2E6] p-4 pt-6 tablet:border-0 tablet:py-0"

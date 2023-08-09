@@ -39,7 +39,7 @@ export default function NavBar() {
   return (
     <nav className="flex bg-black text-white  tablet:px-6 ">
       <div className="flex min-h-[58px] w-full items-center justify-between px-4 tablet:justify-start tablet:gap-4">
-       {/*  <Image
+       { <Image
           src={
             widthScreen === 'mobile'
               ? logoMobile
@@ -48,7 +48,7 @@ export default function NavBar() {
               : logoDesktop
           }
           alt="Logo"
-        /> */}
+        />}
         <ul className="hidden flex-row gap-6  tablet:flex ">
           {links.map((link) => (
             <li key={link.name}>

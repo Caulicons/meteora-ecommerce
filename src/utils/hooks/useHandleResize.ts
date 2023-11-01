@@ -1,26 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export const useWhichScreen = () => {
+export const useWhichDevice = () => {
   const [whichScreen, setWhichScreen] = useState<
     'mobile' | 'tablet' | 'desktop'
-  >(handleResize())
+  >(findDeviceByWidth(window.innerWidth))
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('resize', () => {
-      setWhichScreen(handleResize())
-    })
-  }
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWhichScreen(findDeviceByWidth(window.innerWidth))
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  })
 
   return whichScreen
 }
 
-const handleResize = () => {
-  if (typeof window !== 'undefined') {
-    const windowWidth = window.innerWidth
-    const isMobile = windowWidth < 500
-    const isTablet = windowWidth >= 500 && windowWidth <= 1280
-    return isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
-  }
-
-  return 'mobile'
+function findDeviceByWidth(windowWidth: number) {
+  const isMobile = windowWidth < 500
+  const isTablet = windowWidth >= 500 && windowWidth <= 1280
+  return isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
 }

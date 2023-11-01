@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { ComponentProps } from 'react'
+import Image from 'next/image';
+import { ComponentProps } from 'react';
 
 interface BannerProps extends ComponentProps<'div'> {
   banner: {
@@ -13,6 +13,7 @@ interface BannerProps extends ComponentProps<'div'> {
     }
   }
 }
+
 export default function Banner({ banner }: BannerProps) {
   return (
     <div

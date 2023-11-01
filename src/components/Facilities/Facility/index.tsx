@@ -1,5 +1,5 @@
 'use client'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { useWhichDevice } from '@/utils/hooks/useHandleResize'
 import Image, { StaticImageData } from 'next/image'
 type TypeFacility = {
   id: `${string}-${string}-${string}-${string}-${string}`
@@ -12,7 +12,7 @@ type TypeFacility = {
 }
 
 export default function Facility({ facility }: { facility: TypeFacility }) {
-  const whichScreen = useWhichScreen()
+  const whichScreen = useWhichDevice()
 
   return (
     <div className='flex gap-6 '>

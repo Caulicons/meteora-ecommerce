@@ -1,6 +1,6 @@
 'use client'
 import { ProductsContext } from '@/utils/context/productsContext'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { useWhichDevice } from '@/utils/hooks/useHandleResize'
 import axios from 'axios'
 import Image from 'next/image'
 import { useContext, useEffect, useState } from 'react'
@@ -16,7 +16,7 @@ interface CategoryData {
 
 let categoryClicked: string
 export default function FindCategory() {
-  const whichScreen = useWhichScreen()
+  const whichScreen = useWhichDevice()
   const productContext = useContext(ProductsContext)
   const [categories, setCategories] = useState<CategoryData[]>()
 

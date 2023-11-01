@@ -4,12 +4,12 @@ import { useState } from 'react'
 import ProductModel from '../../Modal/ProductModal'
 import Modal from '@/components/Modal'
 import Button from '@/components/Basic/Inputs/Button'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { useWhichDevice } from '@/utils/hooks/useHandleResize'
 import ProductType from '@/utils/types/productType'
 
 export default function Product({ product }: { product: ProductType }) {
   const [showProductModel, setShowProductModel] = useState(false)
-  const whichScreen = useWhichScreen()
+  const whichScreen = useWhichDevice()
   const handleClick = () => {
     setShowProductModel((state) => !state)
   }

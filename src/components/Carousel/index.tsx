@@ -1,9 +1,9 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import leftArrow from '@images/icon/carousel/icon-arrow-left.png'
 import rightArrow from '@images/icon/carousel/icon-arrow-right.png'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { useWhichDevice } from '@/utils/hooks/useHandleResize'
 import Banner from './Banner'
 import axios from 'axios'
 
@@ -26,59 +26,70 @@ interface BannerData {
 }
 
 function Carousel() {
+  console.log('Carousel rendered...')
   const [show, setShow] = useState(0)
-  const whichScreen = useWhichScreen()
+  const whichScreen = useWhichDevice()
   const carouselRef = useRef<HTMLDivElement>(null)
-  const [banners, setBanners] = useState<BannerData>()
+  const [banners, setBanners] = useState<BannerData | null>(null)
 
+  const handleCarouselEvents = useCallback(
+    (
+      direction: 'right' | 'left' | 'centralize' | 'auto' | 'scroll',
+      number?: number,
+    ) => {
+      const carousel = carouselRef.current
+      const carouselWidth = carousel?.clientWidth || 0
+      const bannersQuantity = banners?.quantity as number
+
+      let toShow = show
+      switch (direction) {
+        case 'right': {
+          const nextBanner = show + 1 >= bannersQuantity ? 0 : show + 1
+          setShow(nextBanner)
+          toShow = nextBanner
+          break
+        }
+        case 'left':
+          const previousBanner = show - 1 <= 0 ? bannersQuantity : show - 1
+          setShow(previousBanner)
+          toShow = previousBanner
+          break
+        case 'centralize':
+          if (typeof number === 'number') {
+            setShow(number)
+            toShow = number
+          }
+          break
+        case 'scroll': {
+          if (carousel) {
+            const scrollPosition = carousel.scrollLeft
+            const toShow = Math.round(scrollPosition / carouselWidth)
+            setShow(toShow)
+          }
+
+          return
+        }
+      }
+      if (carousel) {
+        const scrollPosition = toShow * carouselWidth
+        carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' })
+      }
+    },
+    [banners?.quantity, show],
+  )
   useEffect(() => {
     axios.get<BannerData>('http://localhost:3001/banners').then((res) => {
       setBanners(res.data)
     })
-  }, [])
 
-  const handleCarouselEvents = (
-    direction: 'right' | 'left' | 'centralize' | 'auto' | 'scroll',
-    number?: number,
-  ) => {
-    const carousel = carouselRef.current
-    const carouselWidth = carousel?.clientWidth || 0
-    const bannersQuantity = banners?.quantity as number
+    const i = setInterval(() => {
+      handleCarouselEvents('right')
+    }, 6000)
 
-    let toShow = show
-    switch (direction) {
-      case 'right': {
-        const nextBanner = show + 1 >= bannersQuantity ? 0 : show + 1
-        setShow(nextBanner)
-        toShow = nextBanner
-        break
-      }
-      case 'left':
-        const previousBanner = show - 1 <= 0 ? bannersQuantity : show - 1
-        setShow(previousBanner)
-        toShow = previousBanner
-        break
-      case 'centralize':
-        if (typeof number === 'number') {
-          setShow(number)
-          toShow = number
-        }
-        break
-      case 'scroll': {
-        if (carousel) {
-          const scrollPosition = carousel.scrollLeft
-          const toShow = Math.round(scrollPosition / carouselWidth)
-          setShow(toShow)
-        }
-
-        return
-      }
+    return () => {
+      clearInterval(i)
     }
-    if (carousel) {
-      const scrollPosition = toShow * carouselWidth
-      carousel.scrollTo({ left: scrollPosition, behavior: 'smooth'})
-    }
-  }
+  }, [handleCarouselEvents])
 
   return (
     <div className="relative">
@@ -91,7 +102,7 @@ function Carousel() {
           <Banner
             banner={banner}
             key={banner.id}
-            onScroll={(e) => e.isPropagationStopped()}
+            onScroll={e => e.isPropagationStopped()}
           />
         ))}
       </div>
@@ -115,7 +126,7 @@ function Carousel() {
         <Image
           src={leftArrow}
           alt="preview banner"
-          className="absolute left-6 top-1/2 "
+          className="hidden-highlight absolute left-6 top-1/2 "
         />
       </span>
       <span
@@ -125,7 +136,7 @@ function Carousel() {
         <Image
           src={rightArrow}
           alt="preview banner"
-          className="absolute right-6 top-1/2 "
+          className="hidden-highlight absolute right-6 top-1/2"
         />
       </span>
     </div>

@@ -5,7 +5,7 @@ import logoMobile from '@images/Mobile/Logo_mobile.png'
 import LogoTablet from '@images/Tablet/Logo_tablet.png'
 import hamburger from '@images/icon/hamburger.png'
 import { ChangeEvent, useContext, useState } from 'react'
-import { useWhichScreen } from '@/utils/hooks/useHandleResize'
+import { useWhichDevice } from '@/utils/hooks/useHandleResize'
 import { ProductsContext } from '@/utils/context/productsContext'
 
 const links = [
@@ -16,7 +16,7 @@ const links = [
 ]
 
 export default function NavBar() {
-  const widthScreen = useWhichScreen()
+  const widthScreen = useWhichDevice()
   const [showHamburger, setShowHamburger] = useState(false)
   const productContext = useContext(ProductsContext)
 
